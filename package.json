@@ -1,0 +1,23 @@
+{
+  "name": "haiku-generator",
+  "version": "1.0.0",
+  "description": "Thank you for looking, This is a generator, Of some cool haikus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meier3/haiku-generator.git"
+  },
+  "author": "Party of fools",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meier3/haiku-generator/issues"
+  },
+  "homepage": "https://github.com/meier3/haiku-generator#readme",
+  "dependencies": {
+    "categorized-words": "^1.0.0",
+    "syllable": "^3.0.0"
+  }
+}
