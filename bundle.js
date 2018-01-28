@@ -91,7 +91,7 @@ function makeline(syl,max) {
 function printLine(line){
   let str="";
   for(let i = 0; i < line.length; i++)
-    str = str + line[i] + '&emsp;';
+    str+= line[i] + " ";
   return str;
 }
 
@@ -32909,12 +32909,8 @@ module.exports={
     "pushups",
     "puss",
     "pusses",
-    "pussy",
-    "pussies",
     "pussycat",
     "pussycats",
-    "pussyfoot",
-    "pussyfoots",
     "pustule",
     "pustules",
     "put",
@@ -56422,9 +56418,6 @@ module.exports={
     "pushy",
     "pushier",
     "pushiest",
-    "pussy",
-    "pussier",
-    "pussiest",
     "pustular",
     "putative",
     "putrefactive",
