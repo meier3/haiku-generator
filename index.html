@@ -30,34 +30,36 @@
   </div>
 
   <div id = "fancy" class = "button" style = "text-align:center">
-  <button class="tablinks" onclick="openCity(event, 'Previous Haikus')">Previous Haikus</button>
-
+  <button class="tablinks" onclick="openCity(event)">Previous Haikus</button>
   </div>
+
   <div id = "fancy" class = "signature" style = "padding-top:25%;text-align:center;font-weight:bold;">
   By Party of Fools: Harrison Skalski, Elaina Brownlee, Danica Meier, Cory Kieras
   </div>
 
+  <div class = "newhaiku" id = "refresh">
   <script src="bundle.js">
   </script>
-
+  </div>
   </body>
 
 <script>
-function openCity(evt, cityName) {
-   /* var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
+function openCity(event) {
+  
+   /*var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("newhaiku");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
-    tablinks = document.getElementsByClassName("tablinks");
+   /* tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
     document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";*/
-}
+    evt.currentTarget.className += " active";
+}*/
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+document.getElementsByClassName("place-with-the-text").click();}
 </script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
