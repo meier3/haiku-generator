@@ -90,7 +90,7 @@ function makeline(syl,max) {
 function printLine(line){
   let str="";
   for(let i = 0; i < line.length; i++)
-    str += line[i]+&emsp;
+    str += line[i]+&emsp;&emsp;
   return str;
 }
 
