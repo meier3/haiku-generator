@@ -16182,8 +16182,6 @@ module.exports={
     "foreseers",
     "foresight",
     "foresights",
-    "foreskin",
-    "foreskins",
     "forest",
     "forests",
     "forestation",
