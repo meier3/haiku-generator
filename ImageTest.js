@@ -7,7 +7,11 @@ bing.list({
     detail: true
 })
 .then(function (res) {
-    console.log('first 1 result from bing', res);
+    res.forEach(function(item){
+        console.log(item.url);
+    });
+    //console.log(res);
+
 }).catch(function(err) {
     console.log('err',err);
 })
