@@ -7,7 +7,6 @@
  background-size:cover;
  background-attachment:fixed;
  text-align: center;
- align-items: center;
  font-weight: bold;
  font-family:"Playfair Display" sans-serif;
  font-size:48px;
@@ -79,7 +78,8 @@ div.tab button.active {
 p {
   font-size: 4vw;
   align-self: center;
-  size = 90%;
+  min-width = 75%;
+  max-width = 90%;
   align-items: center;
   text-transform: uppercase;
   font-family: 'Gloria Hallelujah', cursive;
