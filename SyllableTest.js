@@ -1,18 +1,5 @@
 let syllable = require('syllable');
 const words = require('categorized-words');
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-console.log(syllable('we\'ve'));
-
-
-client.search('aardvark');
-=======
-=======
-
-
-
->>>>>>> ab7caca7195fc47be3eddbf1b13d9c59f766be2b
 /*
 
 N	noun	47004
@@ -24,7 +11,6 @@ P	pronoun	78
 S	spoken contraction	9
 Total of all classes	93553
 
- google_image.search([query],[top_n_count],[callback])
 */
 
 let line1;
@@ -34,20 +20,25 @@ let testNoun;
 let testVerb;
 let testAdj;
 let testCon;
-let searchWord;
+let startType;
+let startArr = [['N',47004],['A',14903],['I',188],['C',139],['P',78],['V',31232];
+
+
+/* N=0,A=1,I=2,C=3,P=4*/
+startType = getRandomInt(0,4);
 
 
 let sylCt = 0;
 
 while(sylCt !=5){
 
-    testNoun = words.N[getRandomInt(0,47004)];
+    testNoun = words.startArr[startType][getRandomInt(0,47004)];
     testVerb = words.V[getRandomInt(0,31232)];
     line1 = testNoun+" "+testVerb;
     sylCt = syllable(line1);
 
 }
-searchWord = testNoun;
+
 
 while(sylCt !=7){
 
@@ -70,8 +61,11 @@ while(sylCt!=5){
 
 
 
+console.log(line1+"\n"+line2+"\n"+line3);
+
+
+
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
->>>>>>> 09e8559ce40ea3a915c0e5ddb106267226c91a54
