@@ -39,6 +39,15 @@ h1{
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
+p {
+  font-size: 3vw;
+  align-self: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
 div.tab {
  overflow: hidden;
  border: 2px solid gray;
@@ -73,12 +82,4 @@ div.tab button.active {
 #fancy {
   font-family: 'Itim', cursive;
   font-size: 20px;
-}
-
-p {
-  font-size: 4vw;
-  align-self: center;
-  align-items: center;
-  text-transform: uppercase;
-  font-family: 'Gloria Hallelujah', cursive;
 }
