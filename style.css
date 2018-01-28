@@ -36,8 +36,8 @@ h1{
 .place-with-the-text{
   border-top-style: solid;
   border-top-width: medium;
-  padding-top: 30px;
-  padding-bottom: 40px;
+  padding-top: 40px;
+  padding-bottom: 50px;
 }
 div.tab {
  overflow: hidden;
