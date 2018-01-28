@@ -43,7 +43,7 @@ async function main(){
     sylNum=0;
     sylNum+=syllable(l1[0]);
 
-    l1 = l1.concat(makeline(5,3));
+    l1 = l1.concat(makeline(5,1));
     l2 = makeline(7,3);
     l3 = makeline(5,1);
 
