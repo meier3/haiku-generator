@@ -1,5 +1,7 @@
 let syllable = require('syllable');
 const words = require('categorized-words');
+var Scraper = require('images-scraper')
+    , bing = new Scraper.Bing();
 /*
 
 N	noun
@@ -18,6 +20,7 @@ let l1 = [];
 let l2 = [];
 let l3 = [];
 let word;
+let url;
 let sylNum = 0;
 let currentType; //integer values representing pos
 let randNext; //randomly generated number to determine next pos
@@ -40,10 +43,17 @@ l3 = makeline(5,1);
 console.log(printLine(l1));
 console.log(printLine(l2));
 console.log(printLine(l3));
-
+console.log("HERE: ");
+getImageUrl("banana");
+sleep(3000);
+console.log("HERE: ");
+console.log(url);
+/*
 document.getElementById("line1").innerHTML = printLine(l1);
 document.getElementById("line2").innerHTML = printLine(l2);
 document.getElementById("line3").innerHTML = printLine(l3);
+*/
+//document.getElementById("haiku").src = item.url;
 
 function makeline(syl,max) {
   let r = [];
@@ -66,6 +76,31 @@ function printLine(line){
   for(let i = 0; i < line.length; i++)
     str += line[i]+" ";
   return str;
+}
+
+function getImageUrl(word){
+
+    bing.list({
+        keyword: word,
+        num: 1,
+        detail: true
+    })
+    .then(function (res) {
+        res.forEach(function(item){
+            //console.log("In function "+item.url);
+            url = item.url;
+            console.log("URL: "+url);
+        });
+        //console.log(res);
+
+    }).catch(function(err) {
+        console.log('err',err);
+    })
+
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 //takes in min and max and generates random value
