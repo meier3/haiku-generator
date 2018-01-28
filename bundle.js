@@ -36,7 +36,13 @@ let sylCt = 0; //syllable count
 /////////////////////////TO DO: FIX THOSE YOUNG LONG SYLLABLE WORDS
 async function main(){
     currentType = getRandomInt(0,4);
-    l1.push(posArr[currentType][getRandomInt(0,posNumArr[currentType])]);
+    do{
+        sylNum=0;
+        word = posArr[currentType][getRandomInt(0,posNumArr[currentType])];
+        sylNum = syllable(word);
+    }while(sylNum>5);
+    l1.push(word);
+    sylNum=0;
     sylNum+=syllable(l1[0]);
 
     l1 = l1.concat(makeline(5,3));
