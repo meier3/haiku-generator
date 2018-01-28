@@ -1,3 +1,9 @@
+/*compiliing command:
+browserify HaikuGenerator.js > bundle.js
+*/
+
+
+
 let syllable = require('syllable');
 const words = require('categorized-words');
 //let Scraper = require('images-scraper');

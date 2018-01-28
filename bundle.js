@@ -1,4 +1,10 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+/*compiliing command:
+browserify HaikuGenerator.js > bundle.js
+*/
+
+
+
 let syllable = require('syllable');
 const words = require('categorized-words');
 //let Scraper = require('images-scraper');
@@ -5963,8 +5969,6 @@ module.exports={
     "campsites",
     "campus",
     "campuses",
-    "camshaft",
-    "camshafts",
     "can",
     "cans",
     "canal",
@@ -9703,8 +9707,6 @@ module.exports={
     "crankcases",
     "crankiness",
     "crankinesses",
-    "crankshaft",
-    "crankshafts",
     "cranny",
     "crannies",
     "crap",
@@ -22732,10 +22734,6 @@ module.exports={
     "labs",
     "label",
     "labels",
-    "labial",
-    "labials",
-    "labium",
-    "labia",
     "labor",
     "labors",
     "laboratory",
@@ -36961,8 +36959,6 @@ module.exports={
     "shadings",
     "shadow",
     "shadows",
-    "shaft",
-    "shafts",
     "shag",
     "shags",
     "shagginess",
@@ -53282,8 +53278,6 @@ module.exports={
     "kookier",
     "kookiest",
     "kosher",
-    "labial",
-    "labile",
     "labor",
     "laborious",
     "laboriously",
@@ -85539,10 +85533,6 @@ module.exports={
     "shadowboxed",
     "shadowboxing",
     "shadowboxes",
-    "shaft",
-    "shafted",
-    "shafting",
-    "shafts",
     "shag",
     "shagged",
     "shagging",
