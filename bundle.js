@@ -51791,7 +51791,6 @@ module.exports={
     "goldener",
     "goldenest",
     "gonadal",
-    "gonorrheal",
     "good",
     "better",
     "best",
