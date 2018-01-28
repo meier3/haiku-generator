@@ -72,7 +72,7 @@ function makeline(syl,max) {
       newSyl = syllable(word);
     }while((newSyl+sylNum)>syl);
     if ((newSyl+sylNum)==syl) {
-      if (currentType!=1&&currentType!=3&&currentType!=4) {
+      if (currentType==0||currentType==2||currentType==5) {
         r.push(word);
         sylNum+=newSyl;
       }
@@ -91,7 +91,7 @@ function printLine(line){
   let str="";
   for(let i = 0; i < line.length; i++)
     str = str + line[i] + '&ensp;&ensp;&ensp;';
-    str+='ensp;';
+    str+='  ';
   return str;
 }
 
