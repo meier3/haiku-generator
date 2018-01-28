@@ -91,7 +91,7 @@ function printLine(line){
   let str="";
   for(let i = 0; i < line.length; i++)
     str = str + line[i] + '&ensp;&ensp;&ensp;';
-    str+='  ';
+  console.log(str);
   return str;
 }
 
