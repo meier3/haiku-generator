@@ -18,7 +18,6 @@
   "homepage": "https://github.com/meier3/haiku-generator#readme",
   "dependencies": {
     "categorized-words": "^1.0.0",
-    "google-image-query": "^1.0.3",
     "syllable": "^3.0.0"
   }
 }
