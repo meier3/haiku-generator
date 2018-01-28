@@ -19,7 +19,7 @@ let currentType,nextType,nextType2; //integer values representing pos
 let randNext; //randomly generated number to determine next pos
 let posArr = [words.N,words.A,words.I,words.C,words.P,words.V];
 let posNext = [[5,5,3,3],[0,0,0,0],[0,1,3,4],[0,1,4,5],[0,1,3,5],[0,0,4,4]]; //pos of speech that can follow each pos in posArr
-let posNumArr = [47004,14903,188,139,78,31232]; //number of words for each pos in posArr
+let posNumArr = [46990,14889,180,134,78,31213]; //number of words for each pos in posArr
 
 //generates pos for line1
 currentType = getRandomInt(0,4);
