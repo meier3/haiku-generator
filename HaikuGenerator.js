@@ -20,7 +20,7 @@ let l1 = [];
 let l2 = [];
 let l3 = [];
 let word;
-let url;
+let keyword;
 let sylNum = 0;
 let currentType; //integer values representing pos
 let randNext; //randomly generated number to determine next pos
@@ -64,6 +64,8 @@ function makeline(syl,max) {
       word = (posArr[currentType][getRandomInt(0,posNumArr[currentType])]);
       newSyl = syllable(word);
     }while((newSyl+sylNum)>syl);
+    if (currentType=0) //keyword = last noun
+      keyword=word;
     r.push(word);
     sylNum+=newSyl;
   };
