@@ -41,7 +41,7 @@ h1{
 }
 
 p {
-  font-size: 3vw;
+  font-size: 3vmax;
   align-self: center;
   align-items: center;
   text-transform: uppercase;
