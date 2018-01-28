@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<link rel=icon href=favicon.png sizes="16x16" type="image/png">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <body>
+  <head>
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Itim" rel="stylesheet">
+  <link href="style.css" type="text/css" rel='stylesheet'>
+  <title>Haiku Stew</title></head>
+
+  <div class = "heading">
+  <h1>Haiku Stew</h1>
+  </div>
+
+  <div id = "fancy" class = "logo" style="padding-top:1%;text-align:center;font-weight:bold;padding-bottom:1%"">
+  Custom (randomly generated) haikus for every person that likes to contemplate life sometimes.
+  </div>
+
+  <div class = "place-with-the-text">
+    <img id="image" src="">
+    <p id="line1" style = "text-align:center;"></p>
+    <p id="line2" style = "text-align:center;"></p>
+    <p id="line3" style = "text-align:center;"></p>
+  </div>
+
+  <div id = "fancy"  class = "button" style = "text-align:center; padding-bottom:25px">
+  <button class = "tablinks" onclick = "window.location.reload()" id = "defaultOpen" >New</button>
+  </div>
+
+  <div id = "fancy" class = "button" style = "text-align:center">
+  <button class="tablinks" onclick="openCity(event, 'Previous Haikus')">Previous Haikus</button>
+
+  </div>
+  <div id = "fancy" class = "signature" style = "padding-top:25%;text-align:center;font-weight:bold;">
+  By Party of Fools: Harrison Skalski, Elaina Brownlee, Danica Meier, Cory Kieras
+  </div>
+
+  <script src="bundle.js">
+  </script>
+
+  </body>
+
+<script>
+function openCity(evt, cityName) {
+   /* var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";*/
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
