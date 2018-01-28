@@ -1,6 +1,8 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 let syllable = require('syllable');
 const words = require('categorized-words');
+//let Scraper = require('images-scraper');
+//let bing = new Scraper.Bing();
 /*
 
 N	noun
@@ -19,6 +21,8 @@ let l1 = [];
 let l2 = [];
 let l3 = [];
 let word;
+let keyword;
+//let url = "http://31.media.tumblr.com/27b422302aeacaca02ef9f4e6e0b77e9/tumblr_mq3ib2U7u71s1u8odo2_r1_1280.gif";
 let sylNum = 0;
 let currentType; //integer values representing pos
 let randNext; //randomly generated number to determine next pos
@@ -30,21 +34,30 @@ let sylCt = 0; //syllable count
 
 //generates pos for line1
 /////////////////////////TO DO: FIX THOSE YOUNG LONG SYLLABLE WORDS
-currentType = getRandomInt(0,4);
-l1.push(posArr[currentType][getRandomInt(0,posNumArr[currentType])]);
-sylNum+=syllable(l1[0]);
+async function main(){
+    currentType = getRandomInt(0,4);
+    l1.push(posArr[currentType][getRandomInt(0,posNumArr[currentType])]);
+    sylNum+=syllable(l1[0]);
 
-l1 = l1.concat(makeline(5,3));
-l2 = makeline(7,3);
-l3 = makeline(5,1);
+    l1 = l1.concat(makeline(5,3));
+    l2 = makeline(7,3);
+    l3 = makeline(5,1);
 
-console.log(printLine(l1));
-console.log(printLine(l2));
-console.log(printLine(l3));
+    console.log(printLine(l1));
+    console.log(printLine(l2));
+    console.log(printLine(l3));
+    //getImageUrl("banana");
+    //await sleep(1000);
+    //console.log(url);
 
-document.getElementById("line1").innerHTML = printLine(l1);
-document.getElementById("line2").innerHTML = printLine(l2);
-document.getElementById("line3").innerHTML = printLine(l3);
+
+    document.getElementById("line1").innerHTML = printLine(l1);
+    document.getElementById("line2").innerHTML = printLine(l2);
+    document.getElementById("line3").innerHTML = printLine(l3);
+
+    //document.getElementById("image").src = url;
+}
+
 
 function makeline(syl,max) {
   let r = [];
@@ -55,6 +68,8 @@ function makeline(syl,max) {
       word = (posArr[currentType][getRandomInt(0,posNumArr[currentType])]);
       newSyl = syllable(word);
     }while((newSyl+sylNum)>syl);
+    if (currentType=0) //keyword = last noun
+      keyword=word;
     r.push(word);
     sylNum+=newSyl;
   };
@@ -69,10 +84,37 @@ function printLine(line){
   return str;
 }
 
+function getImageUrl(word){
+
+    bing.list({
+        keyword: word,
+        num: 1,
+        detail: true
+    })
+    .then(function (res) {
+        res.forEach(function(item){
+            //console.log("In function "+item.url);
+            url = item.url;
+            //console.log("URL: "+url);
+        });
+        //console.log(res);
+
+    }).catch(function(err) {
+        console.log('err',err);
+    })
+
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 //takes in min and max and generates random value
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+main();
 
 },{"categorized-words":3,"syllable":7}],2:[function(require,module,exports){
 module.exports={
@@ -5601,9 +5643,6 @@ module.exports={
     "butler",
     "butlers",
     "buts",
-    "butt",
-    "butts",
-    "butte",
     "buttes",
     "butter",
     "butters",
@@ -5622,9 +5661,6 @@ module.exports={
     "butterscotch",
     "buttery",
     "butteries",
-    "buttock",
-    "buttocks",
-    "button",
     "buttons",
     "buttonhole",
     "buttonholes",
@@ -65160,10 +65196,6 @@ module.exports={
     "butchered",
     "butchering",
     "butchers",
-    "butt",
-    "butted",
-    "butting",
-    "butts",
     "butter",
     "buttered",
     "buttering",

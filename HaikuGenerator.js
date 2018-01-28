@@ -1,7 +1,7 @@
 let syllable = require('syllable');
 const words = require('categorized-words');
-var Scraper = require('images-scraper')
-    , bing = new Scraper.Bing();
+//let Scraper = require('images-scraper');
+//let bing = new Scraper.Bing();
 /*
 
 N	noun
@@ -21,6 +21,7 @@ let l2 = [];
 let l3 = [];
 let word;
 let keyword;
+//let url = "http://31.media.tumblr.com/27b422302aeacaca02ef9f4e6e0b77e9/tumblr_mq3ib2U7u71s1u8odo2_r1_1280.gif";
 let sylNum = 0;
 let currentType; //integer values representing pos
 let randNext; //randomly generated number to determine next pos
@@ -32,28 +33,30 @@ let sylCt = 0; //syllable count
 
 //generates pos for line1
 /////////////////////////TO DO: FIX THOSE YOUNG LONG SYLLABLE WORDS
-currentType = getRandomInt(0,4);
-l1.push(posArr[currentType][getRandomInt(0,posNumArr[currentType])]);
-sylNum+=syllable(l1[0]);
+async function main(){
+    currentType = getRandomInt(0,4);
+    l1.push(posArr[currentType][getRandomInt(0,posNumArr[currentType])]);
+    sylNum+=syllable(l1[0]);
 
-l1 = l1.concat(makeline(5,3));
-l2 = makeline(7,3);
-l3 = makeline(5,1);
+    l1 = l1.concat(makeline(5,3));
+    l2 = makeline(7,3);
+    l3 = makeline(5,1);
 
-console.log(printLine(l1));
-console.log(printLine(l2));
-console.log(printLine(l3));
-console.log("HERE: ");
-getImageUrl("banana");
-sleep(3000);
-console.log("HERE: ");
-console.log(url);
-/*
-document.getElementById("line1").innerHTML = printLine(l1);
-document.getElementById("line2").innerHTML = printLine(l2);
-document.getElementById("line3").innerHTML = printLine(l3);
-*/
-//document.getElementById("haiku").src = item.url;
+    console.log(printLine(l1));
+    console.log(printLine(l2));
+    console.log(printLine(l3));
+    //getImageUrl("banana");
+    //await sleep(1000);
+    //console.log(url);
+
+
+    document.getElementById("line1").innerHTML = printLine(l1);
+    document.getElementById("line2").innerHTML = printLine(l2);
+    document.getElementById("line3").innerHTML = printLine(l3);
+
+    //document.getElementById("image").src = url;
+}
+
 
 function makeline(syl,max) {
   let r = [];
@@ -91,7 +94,7 @@ function getImageUrl(word){
         res.forEach(function(item){
             //console.log("In function "+item.url);
             url = item.url;
-            console.log("URL: "+url);
+            //console.log("URL: "+url);
         });
         //console.log(res);
 
@@ -109,3 +112,5 @@ function sleep(ms) {
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+main();
