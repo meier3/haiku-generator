@@ -77,8 +77,8 @@ div.tab button.active {
 
 p {
   font-size-adjust: auto; /*help*/
-  font-size: 3vw;
-  max-width: 100%;
+  font-size: 4vw;
+  max-width:75%;
   align-self: center;
   text-transform: uppercase;
   font-family: 'Gloria Hallelujah', cursive;
