@@ -76,9 +76,9 @@ div.tab button.active {
 }
 
 p {
-  font-size: 3vw;
+  font-size: 4vw;
   align-self: center;
-  max-width: 1200px;
+  min-width: 100%;
   align-items: center;
   text-transform: uppercase;
   font-family: 'Gloria Hallelujah', cursive;
