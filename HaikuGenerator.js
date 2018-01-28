@@ -72,7 +72,7 @@ function makeline(syl,max) {
       newSyl = syllable(word);
     }while((newSyl+sylNum)>syl);
     if ((newSyl+sylNum)==syl) {
-      if (currentType==0||currentType==2||currentType==5) {
+      if (currentType!=1&&currentType!=3&&currentType!=4) {
         r.push(word);
         sylNum+=newSyl;
       }
