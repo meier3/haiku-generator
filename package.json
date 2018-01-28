@@ -19,7 +19,6 @@
   "dependencies": {
     "categorized-words": "^1.0.0",
     "google-image-query": "^1.0.3",
-    "google-images": "^2.1.0",
     "syllable": "^3.0.0"
   }
 }
