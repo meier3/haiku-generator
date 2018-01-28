@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/meier3/haiku-generator#readme",
   "dependencies": {
+    "browserify": "^15.2.0",
     "categorized-words": "^1.0.0",
     "images-scraper": "^2.0.11",
     "syllable": "^3.0.0"

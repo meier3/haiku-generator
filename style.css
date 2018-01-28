@@ -1,0 +1,14 @@
+.body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* used for margins in index.ejs */
+.margins {
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+}
