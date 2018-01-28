@@ -76,8 +76,8 @@ div.tab button.active {
 }
 
 p {
-  font-size-adjust: auto;
-  /*font-size: 36px;*/
+  font-size-adjust: auto; /*help*/
+  font-size: 5vw;
   max-width: 100%;
   align-self: center;
   text-transform: uppercase;
