@@ -9,6 +9,7 @@ bing.list({
 .then(function (res) {
     res.forEach(function(item){
         console.log(item.url);
+        document.getElementById("haiku").src = item.url;
     });
     //console.log(res);
 
