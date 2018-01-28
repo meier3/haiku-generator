@@ -21,7 +21,6 @@ let l1 = [];
 let l2 = [];
 let l3 = [];
 let word;
-let keyword;
 //let url = "http://31.media.tumblr.com/27b422302aeacaca02ef9f4e6e0b77e9/tumblr_mq3ib2U7u71s1u8odo2_r1_1280.gif";
 let sylNum = 0;
 let currentType; //integer values representing pos
@@ -33,7 +32,6 @@ let sylCt = 0; //syllable count
 
 
 //generates pos for line1
-/////////////////////////TO DO: FIX THOSE YOUNG LONG SYLLABLE WORDS
 async function main(){
     currentType = getRandomInt(0,4);
     do{
@@ -47,7 +45,7 @@ async function main(){
 
     l1 = l1.concat(makeline(5,3));
     l2 = makeline(7,3);
-    l3 = makeline(5,1);
+    l3 = makeline(5,3);
 
     console.log(printLine(l1));
     console.log(printLine(l2));
@@ -74,10 +72,17 @@ function makeline(syl,max) {
       word = (posArr[currentType][getRandomInt(0,posNumArr[currentType])]);
       newSyl = syllable(word);
     }while((newSyl+sylNum)>syl);
-    if (currentType=0) //keyword = last noun
-      keyword=word;
-    r.push(word);
-    sylNum+=newSyl;
+    if ((newSyl+sylNum)==syl) {
+      if (currentType!=1&&currentType!=3) {
+        r.push(word);
+        sylNum+=newSyl;
+      }
+    }
+    else {
+      r.push(word);
+      sylNum+=newSyl;
+    }
+
   };
   sylNum = 0;
   return r;
@@ -7224,10 +7229,6 @@ module.exports={
     "chewers",
     "chewiness",
     "chewinesses",
-    "chi",
-    "chis",
-    "chiaroscuro",
-    "chiaroscuros",
     "chic",
     "chics",
     "chicane",
@@ -13307,10 +13308,6 @@ module.exports={
     "eighties",
     "einsteinium",
     "einsteiniums",
-    "ejaculate",
-    "ejaculates",
-    "ejaculation",
-    "ejaculations",
     "ejection",
     "ejections",
     "ejector",
@@ -14005,12 +14002,6 @@ module.exports={
     "erasures",
     "erbium",
     "erbiums",
-    "erection",
-    "erections",
-    "erectness",
-    "erectnesses",
-    "erector",
-    "erectors",
     "eremite",
     "eremites",
     "erg",
@@ -20485,7 +20476,6 @@ module.exports={
     "hypothyroids",
     "hyssop",
     "hyssops",
-    "hysterectomy",
     "hysteria",
     "hysterias",
     "hysteric",
@@ -25554,10 +25544,6 @@ module.exports={
     "menorahs",
     "mensch",
     "mensches",
-    "menses",
-    "menstruation",
-    "mensuration",
-    "mensurations",
     "menswear",
     "menswears",
     "mentalist",
@@ -26072,26 +26058,11 @@ module.exports={
     "ministries",
     "minivan",
     "minivans",
-    "mink",
-    "mink",
-    "minks",
-    "minnesinger",
-    "minnesingers",
     "minnow",
     "minnows",
     "minnow",
     "minor",
     "minors",
-    "minority",
-    "minorities",
-    "minoxidil",
-    "minoxidils",
-    "minster",
-    "minsters",
-    "minstrel",
-    "minstrels",
-    "minstrelsy",
-    "minstrelsies",
     "mint",
     "mints",
     "mintage",
@@ -26760,7 +26731,6 @@ module.exports={
     "mothers",
     "motherboard",
     "motherboards",
-    "motherfucker",
     "motherhood",
     "motherhoods",
     "motherland",
@@ -34679,14 +34649,6 @@ module.exports={
     "retakes",
     "retaliation",
     "retaliations",
-    "retard",
-    "retards",
-    "retardant",
-    "retardants",
-    "retardation",
-    "retardations",
-    "retarder",
-    "retarders",
     "retch",
     "retches",
     "retention",
@@ -35418,26 +35380,14 @@ module.exports={
     "royalties",
     "royalty",
     "royalties",
-    "rub",
-    "rubs",
     "rubato",
     "rubatos",
     "rubati",
     "rubber",
-    "rubbers",
-    "rubberneck",
-    "rubbernecks",
-    "rubbernecker",
     "rubbish",
     "rubbishes",
     "rubble",
     "rubbles",
-    "rubdown",
-    "rubdowns",
-    "rube",
-    "rubes",
-    "rubella",
-    "rubellas",
     "rubidium",
     "rubidiums",
     "ruble",
@@ -50394,7 +50344,6 @@ module.exports={
     "eightieth",
     "eighty",
     "either",
-    "ejaculatory",
     "elaborate",
     "elaborately",
     "elastic",
@@ -50557,9 +50506,6 @@ module.exports={
     "equivocally",
     "eradicable",
     "erasable",
-    "erect",
-    "erectile",
-    "erectly",
     "erelong",
     "ergo",
     "ergonomic",
@@ -54229,8 +54175,6 @@ module.exports={
     "menial",
     "menially",
     "meningeal",
-    "menopausal",
-    "menstrual",
     "mensurable",
     "mental",
     "mentally",
@@ -56248,7 +56192,6 @@ module.exports={
     "prematurely",
     "premed",
     "premedical",
-    "premenstrual",
     "premier",
     "premiere",
     "premium",
@@ -57065,7 +57008,6 @@ module.exports={
     "retail",
     "retaliative",
     "retaliatory",
-    "retardant",
     "retentive",
     "retentively",
     "reticent",
@@ -70187,10 +70129,6 @@ module.exports={
     "egressed",
     "egressing",
     "egresses",
-    "ejaculate",
-    "ejaculated",
-    "ejaculating",
-    "ejaculates",
     "eject",
     "ejected",
     "ejecting",
@@ -70847,10 +70785,6 @@ module.exports={
     "erased",
     "erasing",
     "erases",
-    "erect",
-    "erected",
-    "erecting",
-    "erects",
     "erode",
     "eroded",
     "eroding",
@@ -72655,10 +72589,6 @@ module.exports={
     "fried",
     "frying",
     "fries",
-    "fuck",
-    "fucked",
-    "fucking",
-    "fucks",
     "fuddle",
     "fuddled",
     "fuddling",
@@ -75975,10 +75905,6 @@ module.exports={
     "jigged",
     "jigging",
     "jigs",
-    "jigger",
-    "jiggered",
-    "jiggering",
-    "jiggers",
     "jiggle",
     "jiggled",
     "jiggling",
@@ -77696,10 +77622,6 @@ module.exports={
     "mended",
     "mending",
     "mends",
-    "menstruate",
-    "menstruated",
-    "menstruating",
-    "menstruates",
     "mention",
     "mentioned",
     "mentioning",
@@ -84257,10 +84179,6 @@ module.exports={
     "retaliated",
     "retaliating",
     "retaliates",
-    "retard",
-    "retarded",
-    "retarding",
-    "retards",
     "retch",
     "retched",
     "retching",
@@ -84878,21 +84796,6 @@ module.exports={
     "roweling",
     "rowelling",
     "rowels",
-    "rub",
-    "rubbed",
-    "rubbing",
-    "rubs",
-    "rubber",
-    "rubbered",
-    "rubbering",
-    "rubbers",
-    "rubberize",
-    "rubberized",
-    "rubberizing",
-    "rubberizes",
-    "rubberneck",
-    "rubbernecked",
-    "rubbernecks",
     "rue",
     "rued",
     "ruing",
@@ -92983,17 +92886,6 @@ module.exports={
     "yours",
     "yourself",
     "yourselves"
-  ],
-  "S": [
-    "betcha",
-    "dunno",
-    "gimme",
-    "gonna",
-    "gotta",
-    "kinda",
-    "sorta",
-    "twas",
-    "wanna"
   ]
 }
 

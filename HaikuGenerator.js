@@ -20,7 +20,6 @@ let l1 = [];
 let l2 = [];
 let l3 = [];
 let word;
-let keyword;
 //let url = "http://31.media.tumblr.com/27b422302aeacaca02ef9f4e6e0b77e9/tumblr_mq3ib2U7u71s1u8odo2_r1_1280.gif";
 let sylNum = 0;
 let currentType; //integer values representing pos
@@ -43,9 +42,9 @@ async function main(){
     sylNum=0;
     sylNum+=syllable(l1[0]);
 
-    l1 = l1.concat(makeline(5,1));
+    l1 = l1.concat(makeline(5,3));
     l2 = makeline(7,3);
-    l3 = makeline(5,1);
+    l3 = makeline(5,3);
 
     console.log(printLine(l1));
     console.log(printLine(l2));
@@ -72,10 +71,17 @@ function makeline(syl,max) {
       word = (posArr[currentType][getRandomInt(0,posNumArr[currentType])]);
       newSyl = syllable(word);
     }while((newSyl+sylNum)>syl);
-    if (currentType=0) //keyword = last noun
-      keyword=word;
-    r.push(word);
-    sylNum+=newSyl;
+    if ((newSyl+sylNum)==syl) {
+      if (currentType!=1&&currentType!=3) {
+        r.push(word);
+        sylNum+=newSyl;
+      }
+    }
+    else {
+      r.push(word);
+      sylNum+=newSyl;
+    }
+
   };
   sylNum = 0;
   return r;
