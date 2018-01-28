@@ -79,7 +79,7 @@ p {
   font-size-adjust: auto; /*help*/
   font-size: 4vw;
   align-self: center;
-  max-width: 75%;
+  min-width: 75%;
   text-transform: uppercase;
   font-family: 'Gloria Hallelujah', cursive;
 }
