@@ -39,9 +39,8 @@ while(sylCt !=5){
 }
 
 //generates pos for line2 words 1 and 2
-currentType = nextType;
 randNext = getRandomInt(0,3);
-currentType = posNext[currentType][randNext];
+currentType = posNext[nextType][randNext];
 console.log(currentType);
 randNext = getRandomInt(0,3);
 nextType = posNext[currentType][randNext];
@@ -62,9 +61,8 @@ while(sylCt !=7){
 }
 
 //generates pos for line3
-currentType = nextType2;
 randNext = getRandomInt(0,3);
-currentType = posNext[currentType][randNext];
+currentType = posNext[nextType2][randNext];
 console.log(currentType);
 randNext = getRandomInt(0,3);
 nextType = posNext[currentType][randNext];
