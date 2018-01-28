@@ -2,11 +2,17 @@ let syllable = require('syllable');
 const words = require('categorized-words');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log(syllable('we\'ve'));
 
 
 client.search('aardvark');
 =======
+=======
+
+
+
+>>>>>>> ab7caca7195fc47be3eddbf1b13d9c59f766be2b
 /*
 
 N	noun	47004
@@ -18,6 +24,7 @@ P	pronoun	78
 S	spoken contraction	9
 Total of all classes	93553
 
+ google_image.search([query],[top_n_count],[callback])
 */
 
 let line1;
@@ -27,6 +34,7 @@ let testNoun;
 let testVerb;
 let testAdj;
 let testCon;
+let searchWord;
 
 
 let sylCt = 0;
@@ -39,8 +47,7 @@ while(sylCt !=5){
     sylCt = syllable(line1);
 
 }
-
-
+searchWord = testNoun;
 
 while(sylCt !=7){
 
@@ -60,10 +67,6 @@ while(sylCt!=5){
 
 }
 
-
-
-
-console.log(line1+"\n"+line2+"\n"+line3);
 
 
 
