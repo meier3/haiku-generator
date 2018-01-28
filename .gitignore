@@ -1,1 +1,2 @@
 *node_modules/*
+!node_modules/categorized-words/2of12id.json
