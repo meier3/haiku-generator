@@ -37,7 +37,7 @@ h1{
   border-top-style: solid;
   border-top-width: medium;
   padding-top: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 div.tab {
  overflow: hidden;
@@ -54,8 +54,12 @@ div.tab button {
  padding: 14px 16px;
  transition: 0.3s;
  font-size: 17px;
+}
 
-
+.tablinks {
+  background-color: #cccccc;
+  border-radius: 10px;
+  padding: 10px 15px;
 }
 /* Change background color of buttons on hover */
 div.tab button:hover {
